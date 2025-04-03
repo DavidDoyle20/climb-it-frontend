@@ -36,27 +36,31 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2 className="container-title">Login</h2>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="input-container">
           Email:
           <input
+            className="outlined-input"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <br />
-        <label>
+        <label className="input-container">
           Password:
           <input
+            className="outlined-input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <br />
-        <button type="submit">Login</button>
+        <button className="primary-button" type="submit">
+          Login
+        </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
       </form>
     </div>
